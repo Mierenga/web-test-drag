@@ -1,23 +1,72 @@
 
-.drag {
-    width: 100px;
-    height: 100px;
-    background: green;
-    float:left;
+body {
+  font-family: arial;
 }
 
-.drag img {
+.connectedSortable{
+  float: left;
+  margin: 10px;
+  padding: 5px 0 0 0;
+  border: 1px solid #eee;
+}
+
+#unchosen-tats {
+  padding: 40px;
+  width: 580px;
+  height: 250px;
+  background-color:rgba(0,30,30,0.5);
+}
+
+#chosen-tats {
+  padding: 80px;
+  width: 500px;
+  height: 250px;
+  background-image:url("img/crate.jpg");
+  background-size: cover;
+}
+
+.tat {
+  cursor:move;
+  float: left;
+  margin: 5px;
+  margin-bottom:20px;
+  padding: 5px;
+  font-size: 1.2em;
+  width: 100px;
+  height: 100px;
+}
+
+.tat img {
     height: 100px;
     display: block;
     margin: auto;
 }
 
-.drop {
-    float: left;
-    margin: 50px;
-    width: 500px;
-    height: 300px;
-    border: 1px solid #999;
+p {
+  font-size:20px;
 }
 
+#tats-added {
+  font-weight:bold;
+}
 
+.plus-minus-btn {
+  border-radius: 50%;
+  height:20px;
+  width:20px;
+  border: 1px solid black;
+  font-weight:bold;
+  color:white;
+}
+.plus-btn {
+  background-color:#008800;
+}
+.minus-btn {
+  background-color:#990000;
+  margin-left:20px;
+}
+.tat-count-text {
+  color:white;
+  padding-left:5px;
+  padding-right:5px;
+}

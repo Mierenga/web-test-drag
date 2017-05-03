@@ -1,62 +1,48 @@
-<link rel="stylesheet" href="styles.css">
-
 
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Sortable - Display as grid</title>
-  <style>
-  #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
-  #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
-  </style>
+  <title>Box O' Chocolates</title>
+
+  <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    //$( "#sortable" ).sortable();
-    $( '.drag' ).draggable(
-
-    );
-    $( '.drop' ).droppable({
-      drop: function(event, ui) {
-        $('.drag').draggable("option", "containment", ".drop");
-        //$(ui.draggable).draggable('disable');
-        //$(ui.draggable).sortable();
-        //$(ui.draggable).disableSelection();
-        //alert('You have added a tat to to your box');
-      }
-    });
-
-    
-  } );
-  </script>
+  <script src="drag.js"></script>
 </head>
 <body>
- 
-<ul id="sortable">
-  <li class="ui-state-default drag">
-        <img src="img/fruit.png"/>
-  </li>
-  <li class="ui-state-default drag">
-        <img src="img/urban-roots.png"/>
-  </li>
-  <li class="ui-state-default drag">
-        <img src="img/spring.png"/>
-  </li>
-  <li class="ui-state-default drag">
-        <img src="img/summer.png"/>
-  </li>
-  <li class="ui-state-default drag">
-        <img src="img/fall.png"/>
-  </li>
-  <li class="ui-state-default drag">
-        <img src="img/winter.png"/>
-  </li>
-</ul>
 
-  <div class="drop"> </div>
+<p>You have added <span id="tats-added">0</span> tats to your tater sack.</p>
+
+<p>That comes to a total of $<span id="total-cost">0</span> </p>
+
+<div id="unchosen-tats" class="connectedSortable">
+  <div class="ui-state-default tat" id="fruit_tat">
+        <img src="img/fruit.png"/>
+  </div>
+  <div class="ui-state-default tat" id="urban_tat">
+        <img src="img/urban-roots.png"/>
+  </div>
+  <div class="ui-state-default tat" id="spring_tat">
+        <img src="img/spring.png"/>
+  </div>
+  <div class="ui-state-default tat" id="summer_tat">
+        <img src="img/summer.png"/>
+  </div>
+  <div class="ui-state-default tat" id="fall_tat">
+        <img src="img/fall.png"/>
+  </div>
+  <div class="ui-state-default tat" id="winter_tat">
+        <img src="img/winter.png"/>
+  </div>
+</div>
+<br>
+
+<div id="chosen-tats" class="connectedSortable">
+</div>
+
+
  
 </body>
 </html>

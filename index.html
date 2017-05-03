@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="styles.css">
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Display as grid</title>
+  <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    //$( "#sortable" ).sortable();
+    $( '.drag' ).draggable(
+
+    );
+    $( '.drop' ).droppable({
+      drop: function(event, ui) {
+        $('.drag').draggable("option", "containment", ".drop");
+        //$(ui.draggable).draggable('disable');
+        //$(ui.draggable).sortable();
+        //$(ui.draggable).disableSelection();
+        //alert('You have added a tat to to your box');
+      }
+    });
+
+    
+  } );
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <li class="ui-state-default drag">
+        <img src="img/fruit.png"/>
+  </li>
+  <li class="ui-state-default drag">
+        <img src="img/urban-roots.png"/>
+  </li>
+  <li class="ui-state-default drag">
+        <img src="img/spring.png"/>
+  </li>
+  <li class="ui-state-default drag">
+        <img src="img/summer.png"/>
+  </li>
+  <li class="ui-state-default drag">
+        <img src="img/fall.png"/>
+  </li>
+  <li class="ui-state-default drag">
+        <img src="img/winter.png"/>
+  </li>
+</ul>
+
+  <div class="drop"> </div>
+ 
+</body>
+</html>
+
